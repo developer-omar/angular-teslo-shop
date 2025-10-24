@@ -1,5 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'montserrat';
+  src: url('/assets/fonts/montserrat/MontserratAlternates-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import 'tailwindcss';
+
+@theme {
+  --font-montserrat: 'montserrat', sans-serif;
+  --animate-fadeIn: fadeIn 0.3s ease-in-out;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
 @plugin "daisyui" {
-  themes: dracula --default;
+  themes: night --default;
 }
